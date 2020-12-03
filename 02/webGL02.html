@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webGL02</title>
+    <style type="text/css">
+      .content {
+        position: absolute;
+        left:10px; top: 10px; right: 10; bottom: 10;
+      }
+      .sidebar {
+        position: absolute;
+        left: 1000px; top: 10px; bottom: 10px;
+        width: 500px;
+        border-style:solid;
+	      border-width:medium;
+      }
+    </style>
+  </head>
+
+  <body onload="main()">
+    <div class="content">
+      <canvas id="webgl" width="900" height="900">
+       Please use a browser that supports "canvas"
+      </canvas>
+    </div>
+
+    <!-- <div class="sidebar">
+      <div>
+        <div>
+          旋转速度:<input type="text" id="inputAngle" value="45" style="width:60px;" oninput="inputAngleChange(this.value)">
+          0<input type="range" id="slideAngle" value="45"  min = "0" max="180"  onchange="slideAngleChange(this.value)">180
+        </div>
+        <div>
+          缩放比例:<input type="text" id="inputScale" value="0.8" style="width:60px;" oninput="inputScaleChange(this.value)">
+          0<input type="range" id="slideScale" value="80"  min = "0" max="100"  onchange="slideScaleChange(this.value)">1.0
+        </div>
+      </div>
+    </div> -->
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="webGL02.js"></script>
+  </body>
+</html>
