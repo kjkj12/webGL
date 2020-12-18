@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webGL03</title>
+    <style type="text/css">
+      .content {
+        position: absolute;
+        left:10px; top: 10px; right: 10; bottom: 10;
+      }
+      .sidebar {
+        position: absolute;
+        left: 1000px; top: 10px; bottom: 10px;
+        width: 500px;
+        border-style:solid;
+	      border-width:medium;
+      }
+    </style>
+  </head>
+
+  <body onload="main()">
+    <div class="content">
+      <canvas id="webgl" width="600" height="600">
+       Please use a browser that supports "canvas"
+      </canvas>
+    </div>
+
+    <div class="sidebar">
+
+      <p>上下左右 控制视点 <br/>（左右-视点绕y轴转，上下-视点沿y轴上下移动）</p>
+      <p>鼠标滚轮来接近远离立方体</p>
+      <p>asdw 控制点光源 <br/>（ad-光源绕y轴转，ws-光源沿y轴上下移动）</p>
+      <p>下方滑动条/输入框决定环境光强度</p>
+      
+
+      <div>
+        <div>
+          环境光强度:<input type="text" id="inputAmbient" value="0.2" style="width:60px;">
+          0<input type="range" id="slideAmbient" value="200"  min = "0" max="1000">1
+        </div>
+        <!-- <div>
+          缩放比例:<input type="text" id="inputScale" value="0.8" style="width:60px;" oninput="inputScaleChange(this.value)">
+          0<input type="range" id="slideScale" value="80"  min = "0" max="100"  onchange="slideScaleChange(this.value)">1.0
+        </div>
+      </div> -->
+    </div>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="webGL03.js"></script>
+  </body>
+</html>
